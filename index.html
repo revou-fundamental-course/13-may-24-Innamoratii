@@ -5,61 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Traingle Calculator Assignment</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
 </head>
 <body>
     <header>
         <h1>Welcome to Simple Calculator</h1>
         <section>
-            <p>
-                Hello, welcome to my calculator!
-            </p>
+            <p>Hello, welcome to my calculator!</p>
         </section>
     </header>
-
-    <section>
-        <div class="section-content">
-            <h3>Segitiga</h3>
-        </div>
-
-        <button type="button" id="switch-keliling"><u>Switch to Keliling Seigitga</u></button>
-    </section>
-
-    <section>
-        <div class="section-content">
-            <h2>Luas Segitiga</h2>
-        </div>
-
-        <!--Contoh foto segitiga-->
-        <div class="trianglePicture">
-            <img src="https://static.cdntap.com/tap-assets-prod/wp-content/uploads/sites/24/2022/10/5-8.jpg">
-        </div>
-        <p>Rumus Luas Segitiga:</p>
-        <div class="formulaMath">
-            <h3>1/2 × a × t</h3>
-        </div>
-        <hr/>
-        
-        <!--Section after break-->
         <section>
-            <header>
-                <h2>Hitung Luas Segitiga</h2>
-            </header>
-            <form>
-                <section>
-                    <div>
-                        <label>Alas: </label><input/>
-                    </div>
-                    <div>
-                        <label>Tinggi: </label><input/>
-                    </div>
-                </section>
-
-                <p>Diketahui: lorem ipsum wkwk</p>
-
-                <button type="button">Hitung</button>
-                <button type="button" id="resetButton">Reset</button>
-            </form>
+            <div class="section-content">
+                <h3>Segitiga</h3>
+            </div>
+            <button type="button" id="switch-keliling"><u>Switch to Keliling Seigitga</u></button>
         </section>
-    </section>
+
+        <section>
+            <div class="section-content">
+                <h2>Luas Segitiga</h2>
+            </div>
+
+            <!--Contoh foto segitiga-->
+            <div class="center-element">
+                <img src="https://static.cdntap.com/tap-assets-prod/wp-content/uploads/sites/24/2022/10/5-8.jpg">
+            </div>
+            <p>Rumus Luas Segitiga:</p>
+            <div class="formulaMath">
+                <h3>1/2 × a × t</h3>
+            </div>
+            <hr/>
+            
+            <section>
+                <header>
+                    <h2>Hitung Luas Segitiga</h2>
+                </header>
+
+                <!--inputing a value-->
+                <form id="myForm">
+                    <div class="center-element">
+                        <input placeholder="Nilai Alas" id="inputBase"/>
+                        <input placeholder="Nilai Tinggi" id="inputHeight"/>
+                    </div>
+
+                    <form class="buttonContainer"><!--later removed-->
+                        <p id="process"></p> 
+                        <p id="result"></p>
+                        <div class="center-element">
+                            <button onclick="calculate()" type="button" class="calculateButton">Hitung</button>
+                            <button onclick="clearDisplay()" type="button" class="resetButton">Reset</button>
+                        </div>
+                    </form>
+                </form>
+            </section>
+        </section>
 </body>
 </html>
