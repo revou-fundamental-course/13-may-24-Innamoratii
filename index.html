@@ -7,57 +7,101 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
 </head>
-<body>
+<body background="assets/folk-pattern by Askar.jpg">
     <header>
         <h1>Welcome to Simple Calculator</h1>
         <section>
-            <p>Hello, welcome to my calculator!</p>
+            <p>calculator made by Riko</p>
         </section>
     </header>
-        <section>
+    <main>
+        <section id="daerah-luas">
             <div class="section-content">
                 <h3>Segitiga</h3>
             </div>
-            <button type="button" id="switch-keliling"><u>Switch to Keliling Seigitga</u></button>
+            <a href="#daerah-keliling">Switch to Keliling Seigitga</a>
         </section>
+        <!--luas segitiga-->
+            <section  class="card">
+                <div class="section-content">
+                    <h2>Luas Segitiga</h2>
+                </div>
 
-        <section>
+                <!--foto rumus luas segitiga-->
+                <div class="center-element">
+                    <img src="assets/luas-segitiga.jpg">
+                </div>
+                <p>Rumus Luas Segitiga =</p>
+                <div class="formulaMath">
+                    <h3>1/2 × a × t</h3>
+                </div>
+                <hr/>
+                
+                <section>
+                    <header>
+                        <h2>Hitung Luas Segitiga</h2>
+                    </header>
+
+                    <!--inputing a value-->
+                    <form id="myForm">
+                        <div class="center-element">
+                            <input placeholder="Nilai Alas" id="inputBase"/>
+                            <input placeholder="Nilai Tinggi" id="inputHeight"/>
+                        </div>
+                        <form> <!--tombol menunjukkan hasil perhitungan-->
+                            <p id="proses"></p>
+                            <p id="hasil"></p>
+                            <div class="center-element">
+                                <button onclick="calculateArea()" type="button" class="calculateButton" id="areaButton">Hitung</button>
+                                <button onclick="clearDisplay()" type="reset" class="resetButton">Reset</button>
+                            </div>
+                        </form>
+                    </form>
+                </section>
+            </section>
+        <hr/>
+
+        <!--keliling segitiga-->
+        <section id="daerah-keliling">
+            <a href="#daerah-luas">Switch to Luas Seigitga</a>
+        </section>
+        <section class="card">
             <div class="section-content">
-                <h2>Luas Segitiga</h2>
+                <h2>Keliling Segitiga</h2>
             </div>
 
             <!--Contoh foto segitiga-->
             <div class="center-element">
-                <img src="https://static.cdntap.com/tap-assets-prod/wp-content/uploads/sites/24/2022/10/5-8.jpg">
+                <img src="assets/Perimeter-of-a-Isosceles-Equilateral-and-Scalene-Triangle-1.jpg">
             </div>
-            <p>Rumus Luas Segitiga:</p>
+            <p>Rumus Keliling Segitiga = </p>
             <div class="formulaMath">
-                <h3>1/2 × a × t</h3>
+                <h3>a + b + c</h3>
             </div>
             <hr/>
             
             <section>
                 <header>
-                    <h2>Hitung Luas Segitiga</h2>
+                    <h2>Hitung Keliling Segitiga</h2>
                 </header>
 
                 <!--inputing a value-->
                 <form id="myForm">
                     <div class="center-element">
-                        <input placeholder="Nilai Alas" id="inputBase"/>
-                        <input placeholder="Nilai Tinggi" id="inputHeight"/>
+                        <input placeholder="Nilai a" id="inputA"/>
+                        <input placeholder="Nilai b" id="inputB"/>
+                        <input placeholder="Nilai c" id="inputC"/>
                     </div>
 
-                    <form class="buttonContainer"><!--later removed-->
-                        <p id="process"></p> 
-                        <p id="result"></p>
+                    <form>
+                        <p id="hasil2"></p>
                         <div class="center-element">
-                            <button onclick="calculate()" type="button" class="calculateButton">Hitung</button>
-                            <button onclick="clearDisplay()" type="button" class="resetButton">Reset</button>
+                            <button onclick="calculateKeliling()" type="button" class="calculateButton">Hitung</button>
+                            <button onclick="clearDisplay()" type="reset" class="resetButton">Reset</button>
                         </div>
                     </form>
                 </form>
             </section>
         </section>
-</body>
+    </main>
 </html>

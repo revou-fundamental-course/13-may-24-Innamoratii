@@ -1,22 +1,45 @@
+html{scroll-behavior: smooth;}
+
+a {
+    text-align: center;
+    display: block;
+}
+
+body {
+    background-color: rgb(212, 197, 178);
+    color: rgba(255, 255, 255, 0.89);
+}
+
+.card {
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+    border: 2px solid grey;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border-bottom: 2px solid grey;
+    border-radius: 0.7em;
+}
+
 .section-content{
-    background-color: aqua;
+    background-color: rgb(43, 42, 42);
     padding-top: 2px;
     padding-bottom: 2px;
     text-align: center;
-    width: 50%;
     margin: auto;
     border-radius: 0.5em;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
 } 
 .section-content>h3{margin: 0;}
 
-#switch-keliling {
+#switch-page {
     padding-top: 12px;
     padding-bottom: 12px;
     width: 100%;
     background-color: transparent;
     color: blue;
     border: none;
+    cursor: pointer;
     
 }
 
@@ -29,13 +52,13 @@
 p{text-align: center;}
 
 img {
-    width: 20em;
     border-radius: 4px;
+    max-width: 100%;
 }
 
 .formulaMath {text-align: center}
 
-/* berupa input alas dan tinggi */
+/* berupa input untuk melakukan perhitungan*/
 input {
     width: 50%;
     margin: 8px;
@@ -43,7 +66,12 @@ input {
     border: 1px solid rgb(105, 99, 99);
     padding: 8px;
     font-family: math;
-    
+    background-color: black;
+    color: rgba(255, 255, 255, 0.89);;
+}
+
+h2 {
+    text-align: center;
 }
 
 .buttonContainer {
@@ -58,16 +86,19 @@ input {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.15s;
-
 }
 .resetButton {
     background-color: rgba(255, 0, 0, 0.719);
     color: white;
     padding: 15px;
-    border: 1px solid;
+    border: 1px solid rgba(255, 0, 0, 0.719);
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.15s;
+    
+}
+.center-element {
+    margin: 1em;
 }
 
 button:hover {background-color: hsl(199, 29%, 50%);}
